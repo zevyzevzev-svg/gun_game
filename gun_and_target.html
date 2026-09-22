@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gun and target</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include GSAP CND for smooth animation-->
+    <script src=" http://cloudflare.com"></script>
+</head>
+<body>
+    <div class="game-container">
+        <svg id="gameCanvas" viewBox="0 0 1000 500">
+            <!-- Target -->
+            <g id="target" transform="translate(900, 250)">
+                <circle r="40" fill="red" />
+                <circle r="30" fill="white" />
+                <circle r="20" fill="red" />
+                <circle r="10" fill="yellow" />
+            </g>
+
+            <!-- Gun and Bullet Group -->
+             <g id="gunGroup" transfoem="translate(100, 250)">
+                <!-- Simple Gun Body -->
+                <rect x="-20" y="-10" width="50" height="20" fill="gray" rx="3"/>
+                <!-- Gun Barrel -->
+                <rect x="30" y="-6" width="25" height="10" fill="darkgray"/>
+                <!-- Gun Handle -->
+                <rect x="-10" y="10" width="12" height="25" fill="dimgray" transform="rotate(15 -10 10)"/>
+
+                <!-- Bullet -->
+                <g id="bullet" class="bullets">
+                    <rect x="55" y="-3" width="12" height="6" fill="gold" rx="2"/>
+                </g>
+             </g>
+        </svg>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
